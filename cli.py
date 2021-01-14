@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from repository.memrepo import MemRepo
-from use_cases.room_list_use_case import RoomListUseCase
+from rentomatic.repository.memrepo import MemRepo
+from rentomatic.use_cases.room_list_use_case import RoomListUseCase
 
 room1 = {
     'code': 'f853578c-fc0f-4e65-81b8-566c5dffa35a',

@@ -3,8 +3,8 @@ import uuid
 
 from unittest import mock
 
-from domain.room import Room
-from use_cases import room_list_use_case
+from rentomatic.domain.room import Room
+from rentomatic.use_cases.room_list_use_case import RoomListUseCase
 
 
 @pytest.fixture
@@ -43,7 +43,7 @@ def domain_rooms():
 def test_room_list_without_parameters(domain_rooms):
     repo = mock.Mock()
     repo.list.return_value = domain_rooms
-    use_case = room_list_use_case.RoomListUseCase(repo)
+    use_case = RoomListUseCase(repo)
     result = use_case.execute()
     repo.list.assert_called_with()
     assert result == domain_rooms

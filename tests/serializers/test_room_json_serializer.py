@@ -1,7 +1,7 @@
 import json
 import uuid
-from serializers.room_json_serializer import RoomJsonEncoder
-from domain.room import Room
+from rentomatic.serializers.room_json_serializer import RoomJsonEncoder
+from rentomatic.domain.room import Room
 
 
 def test_serialize_domain_room():
